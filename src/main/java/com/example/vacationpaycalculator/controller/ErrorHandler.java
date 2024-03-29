@@ -10,6 +10,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 
 import javax.validation.ValidationException;
 import java.util.Map;
+import java.util.Objects;
 
 @RestControllerAdvice
 public class ErrorHandler {
@@ -29,7 +30,7 @@ public class ErrorHandler {
     @ExceptionHandler
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public Map<String, String> handleMethodArgumentTypeMismatchException(final MethodArgumentTypeMismatchException e) {
-        return Map.of("Ошибка типа параметра", e.getParameter().getParameterName());
+        return Map.of("Ошибка типа параметра", Objects.requireNonNull(e.getParameter().getParameterName()));
     }
 }
 
