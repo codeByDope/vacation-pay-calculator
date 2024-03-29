@@ -1,5 +1,6 @@
-package com.example.vacationpaycalculator.service;
+package com.example.vacationpaycalculator.service.impl;
 
+import com.example.vacationpaycalculator.service.CalculatorService;
 import de.jollyday.HolidayManager;
 import de.jollyday.ManagerParameters;
 import lombok.extern.slf4j.Slf4j;
