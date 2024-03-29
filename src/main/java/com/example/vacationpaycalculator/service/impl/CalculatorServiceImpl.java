@@ -17,7 +17,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     private final HolidayManager holidayManager;
 
     public CalculatorServiceImpl() {
-        URL url = getClass().getClassLoader().getResource("myHoliday.xml");
+        URL url = getClass().getClassLoader().getResource("my_holiday.xml");
         this.holidayManager = HolidayManager.getInstance(ManagerParameters.create(url));
     }
 

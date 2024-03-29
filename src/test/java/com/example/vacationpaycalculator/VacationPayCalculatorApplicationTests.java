@@ -24,13 +24,7 @@ class VacationPayCalculatorApplicationTests {
     private MockMvc mockMvc;
 
     /*Чтоб тесты не были громоздкими, я объединил проверку корректных параметров с вычислением отпускных с 1 по 10 января.
-    С 1 по 10 января не праздники только 9 и 10 число.
-    ОЧЕНЬ ВАЖНОЕ УТОЧНЕНИЕ!!!
-    Программа не учитывает праздник, расположенный в сб или вскр, если необходимо убрать такую логику
-    в файле my_holiday.xml нужно убрать:
-    <tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY"/>
-    <tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY"/>
-    Также в этот xml можно добавить любой другой праздник.
+    С 1 по 10 января не праздники только 9 и 10 число, но ответ 4, так как 6 и 7 числа - выходные.
      */
     @Test
     public void validParametersWithVacFrom1stJanTo10thJan() throws Exception {
